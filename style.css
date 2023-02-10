@@ -29,10 +29,36 @@ main#calculator section {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-section#display {
+section#screen {
     flex-grow: 1;
 }
 
 section#operations {
-    flex-grow: 2;
+    flex-grow: 2.5;
+    display: grid;
+    grid-template-areas: 
+        'others others others operators'
+        'numbers numbers numbers operators'
+        'numbers numbers numbers operators'
+        'numbers numbers numbers operators';
+    gap: 5px;
+    padding: 10px;
+}
+
+div#others {
+    grid-area: others;
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+div#numbers {
+    grid-area: numbers;
+    border-radius: 5px;
+    background-color: blue;
+}
+
+div#operators {
+    border-radius: 5px;
+    grid-area: operators;
+    background-color: red;
 }
