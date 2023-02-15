@@ -19,10 +19,34 @@ main#calculator {
     height: 400px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
-    padding: 15px 10px;
+    padding: 15px 10px 5px 10px;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+}
+
+div#settings {
+    display: flex;
+    margin: 0 2px;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(156, 156, 156);
+}
+
+div#settings p {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+div#settings i {
+    transition: .2s all ease-in; 
+    cursor: pointer;  
+}
+
+div#settings i:hover {
+    color: white;
+
 }
 
 main#calculator section {
@@ -55,7 +79,7 @@ section#screen div#result {
 section#operations {
     display: grid;
     height: 75%;
-    padding: 10px;
+    padding: 5px 10px 10px 10px;
     grid-template-areas: 
     'header header header aside'
     'main main main aside'
@@ -120,6 +144,13 @@ section#operations span {
     color: white;
     font-family: sans-serif;
     cursor: pointer;
+    transition: .2s all ease-in;
+}
+
+section#operations span:hover {
+    -xpedu-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 .equal {
